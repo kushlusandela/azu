@@ -26,6 +26,13 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
+		return this.students=students;
+
+	}
+
+	@Override
+	public void setStudents(Student[] students) {
+		// Add your implementation here
 		try{
 		if(students==null)
     throw new IllegalArgumentException("IllegalArgumentException occured");
@@ -34,43 +41,44 @@ public class StudentGroup implements StudentArrayOperation {
  catch(Exception e){
     throw new IllegalArgumentException("IllegalArgumentException error");
  }
-		;
-	}
-
-	@Override
-	public void setStudents(Student[] students) {
-		// Add your implementation here
-		try{
-		    int stulen=students.length;
-		if(index<0||index>=stulen)
-    throw new IllegalArgumentException("IllegalArgumentException occured");
-
-
-		}
-	catch(Exception e){
-    throw new IllegalArgumentException("IllegalArgumentException error");
-
- }
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
 		try{
-		int stulen=students.length;
-		if(students==null||index<0||index>=stulen)
+		    int stulen=students.length;
+		if((index<0)||(index>=stulen)){
     throw new IllegalArgumentException("IllegalArgumentException occured");
+		}
 
 		}
- catch(Exception e){
+	catch(Exception e){
     throw new IllegalArgumentException("IllegalArgumentException error");
+
  }
-		return this.students=students;
+
+
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		try{
+		    int stulen=students.length;
+		if((index<0)||(index>=stulen)){
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+		}
+else{
+    students[index]=student;
+}
+		}
+	catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+
+ }
+
+
 	}
 
 	@Override
@@ -86,6 +94,20 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		try{
+		    int stulen=students.length;
+		if((index<0)||(index>=stulen)){
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+		}
+else{
+    students[index]=student;
+}
+		}
+	catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+
+ }
+
 	}
 
 	@Override
