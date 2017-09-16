@@ -57,7 +57,7 @@ public class StudentGroup implements StudentArrayOperation {
     throw new IllegalArgumentException("IllegalArgumentException error");
 
  }
-
+return students;
 
 	}
 
@@ -84,11 +84,38 @@ else{
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		try{
+		if(student==null)
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+    else{
+            //arrange it
+        students[0]=student;
+    }
+
+		}
+ catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+ }
+
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		try{
+        int stulen=students.length;
+		if(student==null)
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+    else{
+stulen=stulen-1;
+students[stulen]=student;
+
+    }
+
+		}
+ catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+ }
 	}
 
 	@Override
@@ -113,6 +140,20 @@ else{
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		try{
+		    int stulen=students.length;
+		if((index<0)||(index>=stulen)){
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+		}
+else{
+    students[index]=student;
+}
+		}
+	catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+
+ }
+
 	}
 
 	@Override
