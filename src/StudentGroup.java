@@ -159,6 +159,28 @@ else{
 	@Override
 	public void remove(Student student) {
 		// Add your implementation here
+		try{
+		      int stulen=students.length;
+		if(students==null)
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+else{
+    for(int i=0;i>stulen;i++)
+    {
+        if(student.equals(students[i]))
+        {
+            students[i]=null;
+            System.out.println("Student not exist");
+        }
+        else{
+             throw new IllegalArgumentException("IllegalArgumentException error");
+
+        }
+    }
+}
+		}
+ catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+ }
 	}
 
 	@Override
