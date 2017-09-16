@@ -28,11 +28,11 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try{
 		if(students==null)
-     throw IllegalArgumentException;
+    throw new IllegalArgumentException("IllegalArgumentException occured");
 
 		}
  catch(Exception e){
-     throw IllegalArgumentException;
+    throw new IllegalArgumentException("IllegalArgumentException error");
  }
 		;
 	}
@@ -43,12 +43,12 @@ public class StudentGroup implements StudentArrayOperation {
 		try{
 		    int stulen=students.length;
 		if(index<0||index>=stulen)
-                 throw IllegalArgumentException;
+    throw new IllegalArgumentException("IllegalArgumentException occured");
 
 
 		}
 	catch(Exception e){
-	         throw IllegalArgumentException;
+    throw new IllegalArgumentException("IllegalArgumentException error");
 
  }
 	}
@@ -56,7 +56,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return null;
+		try{
+		int stulen=students.length;
+		if(students==null||index<0||index>=stulen)
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+
+		}
+ catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+ }
+		return this.students=students;
 	}
 
 	@Override
