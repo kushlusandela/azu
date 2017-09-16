@@ -57,8 +57,8 @@ public class StudentGroup implements StudentArrayOperation {
     throw new IllegalArgumentException("IllegalArgumentException error");
 
  }
-return students;
 
+return students[index];
 	}
 
 	@Override
@@ -146,7 +146,7 @@ else{
     throw new IllegalArgumentException("IllegalArgumentException occured");
 		}
 else{
-    students[index]=student;
+    students[index]=null;
 }
 		}
 	catch(Exception e){
