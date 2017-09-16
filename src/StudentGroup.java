@@ -186,6 +186,21 @@ else{
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		int stulen=students.length;
+		try{
+		if((index<0)||(index>=stulen)){
+    throw new IllegalArgumentException("IllegalArgumentException occured");
+		}
+else{
+        for(int i=index;i==stulen;i++)
+        {
+            students[i+1]=null;        }
+}
+	}
+	catch(Exception e){
+    throw new IllegalArgumentException("IllegalArgumentException error");
+
+ }
 	}
 
 	@Override
